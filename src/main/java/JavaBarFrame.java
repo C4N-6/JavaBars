@@ -60,6 +60,8 @@ class JavaBarFrame extends JFrame {
     p.add(cpanel, gbc);
 
     InfoPanel ipanel = new InfoPanel(this.screenWidth, this.screenHeight);
+    // p.add(ipanel); // TODO: shows the info panle but it seams that it is not
+    // complete
 
     pl.setControlPane(cpanel);
     pl.setInfoPane(ipanel);
