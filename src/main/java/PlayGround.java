@@ -1957,8 +1957,7 @@ class PlayGround extends BorderDrawingPanel implements ActionListener, MouseMoti
     Graphics g = this.getGraphics();
     g.setXORMode(this.getBackground());
     m.draw(g);
-    m.oldx = mx;
-    m.oldy = my;
+    m.update(mx, my);
     m.draw(g);
     g.dispose();
   }
