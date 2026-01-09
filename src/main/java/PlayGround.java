@@ -1833,8 +1833,17 @@ class PlayGround extends BorderDrawingPanel implements ActionListener, MouseMoti
     Graphics g = this.getGraphics();
     g.setXORMode(this.getBackground());
     g.drawRect(r.x, r.y, r.width, r.height);
-    r.width = mx > r.x ? mx - r.x : r.x - mx;
-    r.height = my > r.y ? my - r.y : r.y - my;
+    if (mx > r.x) {
+      r.width = mx - r.x;
+    } else {
+      r.width = r.x - mx;
+    }
+
+    if (my > r.y) {
+      r.height = my - r.y;
+    } else {
+      r.height = r.y - my;
+    }
     g.drawRect(r.x, r.y, r.width, r.height);
   }
 
